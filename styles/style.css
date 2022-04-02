@@ -28,6 +28,11 @@ body {
   min-width: 360px;
 }
 
+:root {
+  --boxShadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
 ul,
 li,
 a,
@@ -54,8 +59,8 @@ header {
   padding: 2.5rem 0;
   border-radius: 5px;
   margin-top: 10px;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
 }
 
 header #logo img {
@@ -78,6 +83,10 @@ header nav a {
   color: #333;
   font-size: 1.6rem;
   padding: 8px 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 img {
@@ -103,8 +112,8 @@ main #about-us {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
 }
 
 main #about-us h2 {
@@ -134,8 +143,8 @@ main #products {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
 }
 
 main #products img {
@@ -198,8 +207,8 @@ main #contacts {
   background-color: #fff;
   border-radius: 5px;
   margin-top: 10px;
-  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,6 +235,36 @@ main #contacts ul {
 footer {
   padding: 2.5rem;
   color: #1b1b1b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .btn-up {
+  cursor: pointer;
+  border: none;
+  margin-top: 12px;
+}
+
+footer .btn-up i {
+  font-size: 3.6rem;
+  color: #1b1b1b83;
+  -webkit-transition: color 0.1s ease-in;
+  transition: color 0.1s ease-in;
+}
+
+footer .btn-up i:hover {
+  color: #1b1b1bc9;
 }
 
 @media screen and (max-width: 430px) {
